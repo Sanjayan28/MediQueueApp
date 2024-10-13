@@ -129,7 +129,9 @@ const AuthScreen = ({ navigation }) => {
 
       {/* Forgot Password for Log In */}
       {!isSignUp && (
-        <TouchableOpacity onPress={() => {}}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("ForgotPasswordScreen")}
+        >
           <Text style={styles.forgotPassword}>Forgot Password?</Text>
         </TouchableOpacity>
       )}
@@ -183,7 +185,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingHorizontal: 20,
     backgroundColor: "#f8f9fa",
-    marginVertical: 10,
+    marginVertical: 30,
   },
   header: {
     fontSize: 32,

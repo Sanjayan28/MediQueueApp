@@ -348,7 +348,13 @@ const ProfileScreen = ({ route, navigation }) => {
       "Are you sure you want to logout?",
       [
         { text: "Cancel", style: "cancel" },
-        { text: "Logout", onPress: () => alert("You have been logged out") },
+        {
+          text: "Logout",
+          onPress: () => {
+            alert("You have been logged out");
+            navigation.navigate("SigninScreen"); // Navigate to the Sign-Up/Log-In screen
+          },
+        },
       ],
       { cancelable: true }
     );
